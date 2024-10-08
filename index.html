@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <!-- ^ favicon -->
+    <link rel="shortcut icon" href="./images/favicon.jpg" type="image/x-icon" />
+    <!-- ^ font awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- ^ Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ^ main style -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- * main JS -->
+    <main>
+      <section>
+        <div class="container">
+          <div
+            class="header d-flex justify-content-between align-items-baseline p-5"
+          >
+            <div class="location d-flex align-items-baseline gap-2">
+              <i class="fa-solid fa-location-dot"></i>
+              <p class="city fs-5 fw-medium">cairo</p>
+            </div>
+            <div
+              class="search w-50 rounded-pill position-relative d-flex align-items-center px-3 py-2"
+            >
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                type="search"
+                class="w-100 bg-transparent border-0 px-3"
+                placeholder="Search City"
+                id="searchInput"
+              />
+            </div>
+          </div>
+
+          <div
+            class="row g-0 d-flex justify-content-center rounded-3 overflow-hidden"
+            id="allCards"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
