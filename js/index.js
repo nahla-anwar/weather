@@ -13,7 +13,6 @@ async function getData(city) {
   display(data);
   cityName.innerHTML = data.location.name;
 }
-getData("cairo");
 
 function display(data) {
   let daysArray = data.forecast.forecastday;
@@ -85,7 +84,11 @@ function success(position) {
   getData(myPosition);
 }
 
-navigator.geolocation.getCurrentPosition(success);
+function error() {
+  getData("cairo");
+}
+
+navigator.geolocation.getCurrentPosition(success, error);
 
 // * events
 searchInput.addEventListener("input", function () {
