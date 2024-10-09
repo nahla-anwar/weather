@@ -7,7 +7,7 @@ const searchInput = document.getElementById("searchInput");
 // * functions
 async function getData(city) {
   let response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=33e08c980f5e47e3b1811835240810&q=${city}&days=3`
+    `https://api.weatherapi.com/v1/forecast.json?key=33e08c980f5e47e3b1811835240810&q=${city}&days=3`
   );
   let data = await response.json();
   display(data);
